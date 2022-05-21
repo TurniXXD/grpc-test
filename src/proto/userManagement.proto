@@ -1,0 +1,19 @@
+syntax = "proto3";
+package usermgmt;
+option go_package = "github.com/turnixxd/grpc-test;go_usermgmt_gen";
+
+service UserManagement {
+  // Unary service method => Single req and single res
+  rpc CreateNewUser (NewUser) returns (User) {}
+}
+
+message NewUser {
+  string name = 1;
+  int32 age = 2;
+}
+
+message User {
+  string name = 1;
+  int32 age = 2;
+  int32 id = 3;
+}
