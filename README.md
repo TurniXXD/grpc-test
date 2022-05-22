@@ -1,6 +1,13 @@
 # grpc-test
 
-- Example of gRPC API usage in Client-Server communication implementing **Unary Service Method**
+## Example of gRPC API usage in Client-Server communication
+
+1. **Unary Service Method**
+2. **Persistant user data**
+3. **Efficient service**
+4. **Protojson**
+5. **Redis DB**
+
 - Get packages:
 
 ```bash

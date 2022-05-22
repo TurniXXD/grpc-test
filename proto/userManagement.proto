@@ -5,6 +5,7 @@ option go_package = "github.com/turnixxd/grpc-test;go_usermgmt_gen";
 service UserManagement {
   // Unary service method => Single req and single res
   rpc CreateNewUser (NewUser) returns (User) {}
+  rpc GetUsers (GetUsersParams) returns (UserList) {}
 }
 
 message NewUser {
@@ -16,4 +17,13 @@ message User {
   string name = 1;
   int32 age = 2;
   int32 id = 3;
+}
+
+message GetUsersParams {
+
+}
+
+message UserList {
+  // repeated => return list of something inside of proto message
+  repeated User users = 1;
 }
