@@ -3,6 +3,7 @@
 
 # Generated
 *.pb.go
+server/*json
 
 # Go
 # Binaries for programs and plugins

@@ -4,9 +4,9 @@
 
 1. **Unary Service Method**
 2. **Persistant user data**
-3. **Efficient service**
-4. **Protojson**
-5. **Redis DB**
+3. **Protojson**
+4. **Redis DB**
+5. **From REST to gRPC**
 
 - Get packages:
 
