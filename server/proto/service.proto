@@ -1,0 +1,28 @@
+syntax = "proto3";
+package service;
+option go_package = "github.com/turnixxd/grpc-test;go_service_gen";
+
+message SetRequest{
+  string key = 1;
+  string value = 2;
+}
+
+message GetRequest{
+  string key = 1;
+}
+
+message DeleteRequest{
+  string key = 1;
+}
+
+message ServerResponse{
+  bool success = 1;
+  string value = 2;
+  string error = 3;
+}
+
+service BasicService{
+  rpc Set(SetRequest) returns (ServerResponse);
+  rpc Get(GetRequest) returns (ServerResponse);
+  rpc Delete(DeleteRequest) returns (ServerResponse);
+}

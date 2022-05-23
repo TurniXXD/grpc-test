@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  server:
+    build:
+      dockerfile: Dockerfile
+      context: server
+    ports:
+      - "4040:4040"
+    depends_on:
+      - redis
+    volumes:
+      - /sys:/sys
+      - ./server/.env:/app/.env
+  redis:
+    container_name: redis_container
+    image: redis
+    ports:
+      - "6379:6379"
+  client:
+    build:
+      dockerfile: Dockerfile
+      context: client
+    depends_on:
+      - redis
+    volumes:
+      - /sys:/sys
+      - ./client/.env:/app/.env

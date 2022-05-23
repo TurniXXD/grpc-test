@@ -1,8 +1,13 @@
-module github.com/turnixxd/grpc-test
+module github.com/turnixxd/grpc-test/client
 
 go 1.18
 
 require github.com/joho/godotenv v1.4.0
+
+require (
+	github.com/go-redis/redis v6.15.9+incompatible // indirect
+	github.com/go-redis/redis/v7 v7.4.1 // indirect
+)
 
 require (
 	github.com/golang/protobuf v1.5.2 // indirect
